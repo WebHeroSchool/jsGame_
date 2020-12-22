@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    background: url(img/background.jpg);
+ }
+
+ .off {
+  display: none;
+}
+
+.container {
+ width: 100%;
+ margin: 0 auto;
+ max-width: 1290px;
+ z-index: 10;
+ color: white;
+}
+
+.menu.off {
+  display: none;
+}
+
+.menu {
+  height: 100vh;
+  background-image: url(img/cards.png);
+  background-repeat: no-repeat;
+  background-position: bottom 70px left 737px;
+  padding: 90px 0 0 26px;
+  box-sizing: border-box;
+}
+
+ .menu__title {
+   font: 700 57px/67px 'Roboto', sans-serif;
+   color: #fff;
+   margin-bottom: 9px;
+ }
+
+  .menu__subtitle {
+    font: 400 19px/22px 'Roboto', sans-serif;
+    color: #fff;
+    margin: 7px 0 60px 5px;
+  }
+
+   .choice__easy {
+     font: 700 50px/59px 'Roboto', sans-serif;
+     color: #fff;
+     margin-left: 49px;
+     margin-bottom: 22px;
+   }
+
+  .choice__middle {
+    font: 700 50px/59px 'Roboto', sans-serif;
+    color: #fff;
+    margin-left: 48px;
+    margin-bottom: 25px;
+  }
+
+  .choice__hard {
+    font: 700 50px/59px 'Roboto', sans-serif;
+    color: #fff;
+    margin-left: 48px;
+    margin-bottom: 114px;
+  }
+
+  .btn {
+    font: 700 32px/37px 'Roboto', sans-serif;
+    color: #fff;
+    background: #d62b2e;
+    padding: 28px 84px;
+    border-radius: 7px;
+  }
+
+  .menu__list {
+  display: flex;
+  justify-content: space-between;
+  }
