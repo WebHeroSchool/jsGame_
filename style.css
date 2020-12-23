@@ -175,3 +175,15 @@ body {
   transform: none;
   transiton: none;
 }
+
+@media (max-width: 1300px) {
+
+  .menu {
+    background-size: 45%;
+    background-position: center right;
+  }
+
+  .menu__title {
+    font: 700 50px/60px 'Roboto', sans-serif;
+  }
+}
