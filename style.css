@@ -3,16 +3,15 @@ body {
     background: url(img/background.jpg);
  }
 
- .off {
+.off {
   display: none;
 }
 
 .container {
- width: 100%;
- margin: 0 auto;
- max-width: 1290px;
- z-index: 10;
- color: white;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1290px;
+  z-index: 10;
 }
 
 .menu.off {
@@ -28,48 +27,151 @@ body {
   box-sizing: border-box;
 }
 
- .menu__title {
-   font: 700 57px/67px 'Roboto', sans-serif;
-   color: #fff;
-   margin-bottom: 9px;
- }
-
-  .menu__subtitle {
-    font: 400 19px/22px 'Roboto', sans-serif;
-    color: #fff;
-    margin: 7px 0 60px 5px;
-  }
-
-   .choice__easy {
-     font: 700 50px/59px 'Roboto', sans-serif;
-     color: #fff;
-     margin-left: 49px;
-     margin-bottom: 22px;
-   }
-
-  .choice__middle {
-    font: 700 50px/59px 'Roboto', sans-serif;
-    color: #fff;
-    margin-left: 48px;
-    margin-bottom: 25px;
-  }
-
-  .choice__hard {
-    font: 700 50px/59px 'Roboto', sans-serif;
-    color: #fff;
-    margin-left: 48px;
-    margin-bottom: 114px;
-  }
-
-  .btn {
-    font: 700 32px/37px 'Roboto', sans-serif;
-    color: #fff;
-    background: #d62b2e;
-    padding: 28px 84px;
-    border-radius: 7px;
-  }
-
-  .menu__list {
+.menu__list {
   display: flex;
   justify-content: space-between;
-  }
+}
+
+.menu__title {
+  font: 700 57px/67px 'Roboto', sans-serif;
+  color: #fff;
+  margin-bottom: 9px;
+}
+
+.menu__subtitle {
+  font: 400 19px/22px 'Roboto', sans-serif;
+  color: #fff;
+  margin: 7px 0 60px 5px;
+}
+
+.choice__item {
+  position: relative;
+  cursor: pointer;
+  transition: color 1s;
+}
+
+.choice__item:hover {
+  color: #d62b2e;
+}
+
+.choice__easy {
+  font: 700 50px/59px 'Roboto', sans-serif;
+  color: #fff;
+  margin-left: 49px;
+  margin-bottom: 22px;
+}
+
+.choice__easy.active {
+  position: relative;
+}
+
+.choice__easy.active::before {
+  position: absolute;
+  content: url(img/icon.png);
+  margin-left: -45px;
+}
+
+.choice__middle {
+  font: 700 50px/59px 'Roboto', sans-serif;
+  color: #fff;
+  margin-left: 48px;
+  margin-bottom: 25px;
+}
+
+.choice__middle.active {
+  position: relative;
+}
+
+.choice__middle.active::before {
+  position: absolute;
+  content: url(img/icon.png);
+  margin-left: -45px;
+}
+
+.choice__hard {
+  font: 700 50px/59px 'Roboto', sans-serif;
+  color: #fff;
+  margin-left: 48px;
+  margin-bottom: 114px;
+}
+
+.choice__hard.active {
+  position: relative;
+}
+
+.choice__hard.active::before {
+  position: absolute;
+  content: url(img/icon.png);
+  margin-left: -45px;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font: 700 32px/37px 'Roboto', sans-serif;
+  color: #fff;
+  background: #d62b2e;
+  padding: 28px 84px;
+  border-radius: 7px;
+  transition: ease .5s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.game-page.off {
+  display: none;
+}
+
+.game-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.game-page__levels {
+  display: grid;
+  grid-template-columns: 215px 215px 215px;
+  grid-gap: 1.2vw;
+  align-content: center;
+}
+
+.game-page__levels.off {
+  display: none;
+}
+
+.hidden-page.off {
+  display: none;
+}
+
+.levels__item {
+  width: 215px;
+  height: 301px;
+  transition: translateY .5s, transform .5s;
+}
+
+.levels__item:hover {
+  transform: translateY(-38px) rotate(-3deg);
+}
+
+.card-game-over {
+  transform: rotateY(180deg);
+  content: url(img/Group.png);
+}
+
+.card-game-over.opened {
+  transform: none;
+  transiton: none;
+}
+
+.card-bug {
+  transform: rotateY(180deg);
+  content: url(img/bug.png);
+}
+
+.card-bug.opened {
+  transform: none;
+  transiton: none;
+}
