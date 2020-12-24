@@ -134,7 +134,7 @@ body {
 .game-page__levels {
   display: grid;
   grid-template-columns: 215px 215px 215px;
-  grid-gap: 1.2vw;
+  grid-gap: 1.6vw;
   align-content: center;
 }
 
@@ -148,7 +148,7 @@ body {
 
 .levels__item {
   width: 215px;
-  height: 301px;
+  height: 326px;
   transition: translateY .5s, transform .5s;
 }
 
@@ -185,5 +185,70 @@ body {
 
   .menu__title {
     font: 700 50px/60px 'Roboto', sans-serif;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .menu {
+    background-size: 35%;
+    background-position: bottom 500px right 5px;
+  }
+
+  .menu__title {
+    font: 700 40px/50px 'Roboto', sans-serif;
+  }
+
+  .menu__subtitle {
+    font: 400 15px/19px 'Roboto', sans-serif;
+  }
+
+  .choice__easy {
+    font: 700 40px/50px 'Roboto', sans-serif;
+  }
+
+  .choice__middle {
+    font: 700 40px/50px 'Roboto', sans-serif;
+  }
+
+  .choice__hard {
+    font: 700 40px/50px 'Roboto', sans-serif;
+  }
+
+  .btn {
+    font: 700 27px/32px 'Roboto', sans-serif;
+    padding: 20px 76px;
+  }
+
+  .game-page__levels {
+    grid-template-columns: 136px 136px 134px;
+    grid-gap: 0vw;
+  }
+
+  .levels__item {
+    width: 135px;
+    height: 205px;
+  }
+}
+
+@media (max-width: 375px) {
+
+  .menu__title {
+    text-align: center;
+  }
+
+  .menu__subtitle {
+    margin: 7px 8px 60px 0;
+    text-align: center;
+  }
+
+  .game-page__levels {
+    grid-template-columns: 116px 116px 112px;
+    grid-gap: 0vw;
+  }
+
+  .levels__item {
+    width: 115px;
+    height: 180px;
   }
 }
