@@ -4,15 +4,15 @@ for (let pressbutton of document.querySelectorAll('.choice__item')) {
     this.classList.add('active');
   });
 }
-let current = 0;
+let actual = 0;
 
 document.querySelector('.btn').addEventListener('click', function(event) {
   let cardsArr = [];
-  let gLevel = document.querySelector('.game-page__levels');
+  let levelGame = document.querySelector('.game-page__levels');
 
   document.querySelector('.menu').classList.add('off');
   document.querySelector('.game-page').classList.remove('off');
-  gLevel.classList.remove('off');
+  levelGame.classList.remove('off');
 
   let level = document.querySelector('.active').dataset.level;
   setLevel = Number(level);
@@ -21,10 +21,10 @@ document.querySelector('.btn').addEventListener('click', function(event) {
     let card = document.querySelector('.hidden-page .levels__item').cloneNode(true);
 
     card.addEventListener('click', function(event) {
-      current++;
+      actual++;
       if (card.classList.contains('opened')) {
         location.reload();
-      } if (current<2) {
+      } if (actual<2) {
         let setCollection = document.querySelectorAll('.game-page__levels .levels__item');
         let cardIndex = [ ...setCollection ].indexOf(this);
 
@@ -38,7 +38,7 @@ document.querySelector('.btn').addEventListener('click', function(event) {
         }
       } else {location.reload();}
     });
-     gLevel.append(card);
+     levelGame.append(card);
   }
 });
 
