@@ -31,7 +31,6 @@ document.querySelector('.btn').addEventListener('click', function(event) {
         if (cardsArr.length === 0) {
           cardsArr = getGameData(setLevel);
         }
-
         if (cardsArr[cardIndex] > 0) {
           card.classList.add('card-bug', 'opened');
         } else {
